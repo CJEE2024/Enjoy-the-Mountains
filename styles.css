@@ -75,7 +75,12 @@ header a {
     background-image: linear-gradient(rgba(230,205,205,0.418),rgba(255, 255, 255, 0.623)), url('Images/pexels-quang-nguyen-vinh-2649403.jpg');
 }
 
-
+.container {
+    margin-left: 2rem;
+    margin-right: auto;
+    margin-top: auto;
+    width: auto;
+}
 
 
 

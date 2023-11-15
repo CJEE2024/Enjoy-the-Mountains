@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
     <header>
-      <img src="Images/pexels-krivec-ales-551851.jpg" />
+      <img alt ="logo" src="Images/pexels-krivec-ales-551851.jpg" />
       <nav>
         <div class="dropdown">
           <a
@@ -23,24 +26,22 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main>
       <div class="section-inner">
         <h2>Mountains</h2>
       </div>
-  
+  <form>
           <label for="mountainsList">Select Mountain</label>
           <select id="mountainsList">
             <option value="">Select...</option>
           </select>
-          <button type="button" id="detailsButton">Show Details</button> 
+         
         </form>
         <p id="mountainDataParagraph"></p>
       </main>
-      <script>
-        "use strict";
-        let mountain = []
-      </script>
-      <footer></footer>
+     <script>
+      
+     </script>
   
       <script src="scripts/mountainData.js"></script>
       <script src="scripts/mountains.js"></script>

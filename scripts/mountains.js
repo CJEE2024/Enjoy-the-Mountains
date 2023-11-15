@@ -7,10 +7,10 @@ const mountainsList = document.getElementById("mountainsList");
 
 //create functions
 function loadMountainsList() {
-  for (const mountainName of mountainsArray) {
+  for (const mountain of mountainsArray) {
     let option = document.createElement("option");
-    option.textContent = mountainName;
-    option.value = mountainName;
+    option.textContent = mountain.name;
+    option.value = mountain.name;
     mountainsList.appendChild(option);
   }
 }
