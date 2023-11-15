@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>National Parks Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img alt="background" src="images/pexels-krivec-ales-551851.jpg" />
+      <nav>
+        <div class="dropdown">
+          <ul class="dropdown-menu">
+            <li><a class="#dropdown-item" href="home.html">Home</a></li>
+            <li><a class="#dropdown-item" href="parks.html">National Parks</a></li>
+            <li><a class="#dropdown-item" href="mountains.html">Mountains</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form>
+        <label for="statesList">By Location</label>
+        <select id="statesList">
+          <option value="">Select...</option>
+          
+        </select>
+        <!-- <label for="parkTypesList">By Type</label>
+        <select id="parkTypesList">
+          <option value="">Select...</option>
+          <option value="ABLI">Abraham Lincoln</option>
+        </select> -->
+       
+      </form>
+      <table id="nationalParkTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Phone</th>
+            <th>Website</th>
+          </tr>
+        </thead>
+        <tbody id="nationalParkTableBody"></tbody>
+      </table>
+    </main>
+    <footer></footer>
+
+    <script src="scripts/locationData.js"></script>
+    <script src="scripts/parkTypeData.js"></script>
+    <script src="scripts/nationalParkdata.js"></script>
+    <script src="scripts/parks.js"></script>
+  </body>
+</html>
