@@ -39,6 +39,7 @@ function showMountainDetails() {
   outPut.appendChild(coordsLng);
 
   let mountainImage = document.createElement("img");
+  mountainImage.style.width = "40%";
   mountainImage.src = `images/${mountainsArray[userSelection].img}`;
   mountainImage.alt = `An image of ${mountainsArray[userSelection].name}`;
   outPut.appendChild(mountainImage);
