@@ -1,5 +1,5 @@
 //get html elements into variables
-const parksList = document.getElementById("parksList");
+const statesList = document.getElementById("statesList");
 const locationRadio = document.getElementById("locationRadio");
 const typeRadio = document.getElementById("typeRadio");
 const allRadio = document.getElementById("allRadio");
@@ -39,7 +39,7 @@ function loadNationalParkTable() {
 
 function loadNationalParkTableByStateName() {
   nationalParkTableBody.innerHTML = "";
-  const parkName = parksList.value;
+  const parkName = statesList.value;
   for (const park of nationalParksArray) {
     if (park.State == parkName) {
       let row = nationalParkTableBody.insertRow(-1);
@@ -68,7 +68,7 @@ function loadNationalParkTableByStateName() {
 }
 function loadNationalParkTableByType() {
   nationalParkTableBody.innerHTML = "";
-  const parkName = parksList.value;
+  const parkName = statesList.value;
 
   const selectedType = parkTypesArray.find((type) => parkName.includes(type));
 
@@ -88,8 +88,9 @@ function loadNationalParkTableByType() {
       cell5.innerText = park.ZipCode;
       let cell6 = row.insertCell(5);
       cell6.innerText = park.Phone;
-      let cell7 = row.insertCell(6);
       if (park.Visit) {
+        let cell7 = row.insertCell(6);
+
         var link = document.createElement("a");
         link.href = park.Visit;
         link.innerText = park.LocationName;
@@ -103,37 +104,63 @@ function loadNationalParkTableByType() {
 loadNationalParkTable();
 
 //write functions
-function loadParksList() {
-  parksList.innerText = "";
+function loadStatesList() {
+  // statesList.innerText = "";
+  // document.querySelector("form>label").innerHTML = "";
+  // statesList.style.display = "block";
+  // nationalParkTableBody.innerHTML = "";
+
+  // let label = document.querySelector("form>label");
+  // let h3 = document.createElement("h3");
+  // h3.innerText = "By Location";
+  // label.appendChild(h3);
 
   for (const parkName of locationsArray) {
     let option = document.createElement("option");
     option.textContent = parkName;
     option.value = parkName;
-    parksList.appendChild(option);
+    statesList.appendChild(option);
   }
 }
 
 function loadTypeList() {
-  parksList.innerText = "";
-  document.querySelector("form>label").innerText = "By Type";
-  let label = document.querySelector("form>label")
-  
-  
+  // statesList.innerText = "";
+  // document.querySelector("form>label").innerHTML = "";
+
+  // statesList.style.display = "block";
+  // nationalParkTableBody.innerHTML = "";
+
+  // let label = document.querySelector("form>label");
+  // let h3 = document.createElement("h3");
+  // h3.innerText = "By Type";
+  // label.appendChild(h3);
+
   for (const parkType of parkTypesArray) {
     let option = document.createElement("option");
     option.textContent = parkType;
     option.value = parkType;
-    parksList.appendChild(option);
+    statesList.appendChild(option);
   }
 }
 //wire-up functions that was created in the last step
-loadParksList();
-parksList.onchange = loadNationalParkTableByStateName;
 
-locationRadio.onclick = loadParksList;
-typeRadio.onclick = loadTypeList;
-allRadio.onclick = function () {
-  parksList.style.display = "none";
-  loadNationalParkTable();
-};
+
+statesList.onchange = loadNationalParkTableByStateName;
+statesList.onchange = loadNationalParkTableByType;
+loadStatesList();
+
+loadTypeList();
+
+// locationRadio.onclick = loadstatesList;
+// typeRadio.onclick = loadTypeList;
+// allRadio.onclick = function () {
+  // statesList.style.display = "none";
+  // document.querySelector("form>label").innerHTML = "";
+  // let label = document.querySelector("form>label");
+  // let h3 = document.createElement("h3");
+  // h3.innerText = "By All";
+  // label.appendChild(h3);
+
+//   loadNationalParkTable();
+// };
+

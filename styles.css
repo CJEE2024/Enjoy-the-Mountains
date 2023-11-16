@@ -63,6 +63,11 @@ header a {
     color: black;
 }
 
+#serviceList {
+    display: flex;
+    justify-content: center;
+}
+
 
 #mountain {
    background-image: linear-gradient(rgba(230, 205, 205, 0.418),rgba(255, 255, 255, 0.322)), url('Images/pexels-pixabay-326058.jpg')
@@ -76,10 +81,8 @@ header a {
 }
 
 .container {
-    margin-left: 2rem;
-    margin-right: auto;
-    margin-top: auto;
-    width: auto;
+    padding-inline: 6rem;
+    padding-block: 4rem; 
 }
 
 

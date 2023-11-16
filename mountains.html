@@ -1,131 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark" lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <img alt ="logo" src="Images/pexels-krivec-ales-551851.jpg" />
-      <nav>
-        <div class="dropdown">
-          <a
-            href="#"
-            class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="#dropdown-item" href="home.html">Home</a></li>
-            <li><a class="#dropdown-item" href="parks.html">National Parks</a></li>
-            <li><a class="#dropdown-item" href="mountains.html">Mountains</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="section-inner">
-        <h2>Mountains</h2>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+<body>
+  <header>
+    <img src="Images/pexels-krivec-ales-551851.jpg">
+    <nav>
+      <div class="dropdown">
+        <a
+        href="#"
+        class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-body-emphasis text-decoration-none dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        >
+        <!--<svg class="bi me-2" width="40" height="32">use xlink:href="#bootstrap"></use></svg>-->
+      </a>
+        <ul class="dropdown-menu">
+          <li><a class="#dropdown-item" href="home.html">Home</a></li>
+          <li><a class="#dropdown-item" href="parks.html">National Parks</a></li>
+          <li><a class="#dropdown-item" href="mountains.html">Mountains</a></li>
+        </ul>
       </div>
-  <form>
-          <label for="mountainsList">Select Mountain</label>
-          <select id="mountainsList">
-            <option value="">Select...</option>
-          </select>
-         
-        </form>
-        <p id="mountainDataParagraph"></p>
-      </main>
-     <script>
-      
-     </script>
-  
-      <script src="scripts/mountainData.js"></script>
-      <script src="scripts/mountains.js"></script>
+      </ul>
+    </nav>
+  </header>
+    <main class="container">
+      <h3>Mountains</h3>
+      <form>
+        <label for="mountainsList">Mountain</label>
+        <select id="mountainsList" onchange="showMountainDetails();">
+          <option value="">Select...</option>
+        </select>
+      </form>
+      <div id="outPut"></div>
+      <p id="mountainDetailsParagraph"></p>
+    </article>
+  </main>
+  <footer></footer>
 
-  
-  
-  
-
-  </body>
+  <script src="scripts/mountainData.js"></script>
+  <script src="scripts/mountains.js"></script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
