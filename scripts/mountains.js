@@ -22,16 +22,21 @@ function showMountainDetails() {
   title.textContent = mountainsArray[userSelection].name;
   outPut.appendChild(title);
 
-  
-
   let elevation = document.createElement("p");
   elevation.textContent = `Elevation: ${mountainsArray[userSelection].elevation} feet`;
   outPut.appendChild(elevation);
 
- let effort = document.createElement("p");
- effort.textContent = `Effort: ${mountainsArray[userSelection].effort}`
- outPut.appendChild(effort);
+  let effort = document.createElement("p");
+  effort.textContent = `Effort: ${mountainsArray[userSelection].effort}`;
+  outPut.appendChild(effort);
 
+  let coordsLat = document.createElement("p");
+  coordsLat.textContent = `Coordinates: ${mountainsArray[userSelection].coords.lat} lat`;
+  outPut.appendChild(coordsLat);
+
+  let coordsLng = document.createElement("p");
+  coordsLng.textContent = `Coordinates: ${mountainsArray[userSelection].coords.lng} long`;
+  outPut.appendChild(coordsLng);
 
   let mountainImage = document.createElement("img");
   mountainImage.src = `images/${mountainsArray[userSelection].img}`;
@@ -39,12 +44,9 @@ function showMountainDetails() {
   outPut.appendChild(mountainImage);
   console.log(userSelection);
 
-  
-
   let descriptiion = document.createElement("p");
   descriptiion.textContent = mountainsArray[userSelection].desc;
   outPut.appendChild(descriptiion);
-
 }
 
 console.log(mountainsArray);
