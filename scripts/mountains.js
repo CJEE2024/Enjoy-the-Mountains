@@ -46,7 +46,7 @@ function showMountainDetails() {
 
   let descriptiion = document.createElement("p");
   descriptiion.textContent = mountainsArray[userSelection].desc;
-  outPut.appendChild(description);
+  outPut.appendChild(descriptiion);
 }
 
 console.log(mountainsArray);
