@@ -14,7 +14,7 @@ header {
     right: 0;
     height: 50px;
     line-height: 50px;
-    background-color: navajowhite;
+    background-color: rgb(192, 211, 211);
 }
 
 header * {
@@ -88,7 +88,9 @@ header a {
     padding-inline: 6rem;
     padding-block: 4rem; 
 }
-
+.container {
+    background-color: blanchedalmond;
+}
 
 
 
