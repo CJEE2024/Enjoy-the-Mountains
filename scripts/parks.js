@@ -1,7 +1,10 @@
 // //get html elements into variables
-// const locationRadio = document.getElementById("locationRadio");
-// const typeRadio = document.getElementById("typeRadio");
-// const allRadio = document.getElementById("allRadio");
+const locationRadio = document.querySelector("#locationRadio");
+const typeRadio = document.querySelector("#typeRadio");
+
+const locationContainer = document.querySelector("#locationContainer");
+const parkTypeContainer = document.querySelector("#parkTypeContainer");
+
 const statesList = document.getElementById("statesList");
 const parkTypesList = document.getElementById("parkTypesList");
 
@@ -119,12 +122,28 @@ function loadTypeList() {
     parkTypesList.appendChild(option);
   }
 }
+
+function searchTypeChanged() {
+  if (locationRadio.checked) {
+    locationContainer.style.display = "block";
+  } else {
+    locationContainer.style.display = "none";
+  }
+  if (typeRadio.checked) {
+    parkTypeContainer.style.display = "block";
+  } else {
+    parkTypeContainer.style.display = "none";
+  }
+}
+
+locationRadio.onchange = searchTypeChanged;
+typeRadio.onchange = searchTypeChanged;
+
 //wire-up functions that was created in the last step
 statesList.onchange = loadNationalParkTableByStateName;
 parkTypesList.onchange = loadNationalParkTableByType;
 
+searchTypeChanged();
 loadStatesList();
 loadTypeList();
 loadNationalParkTable();
-
-

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
 body {
-    margin: 0;
-    margin-top: 50px;
-    font-family: sans-serif;
+  margin: 0;
+  margin-top: 50px;
+ font-family: 'Raleway', sans-serif;
 }
 
 header {
@@ -22,10 +24,12 @@ header * {
 
 header ul {
     padding: 0;
+    
 }
 
 header li {
     margin-left: 20px;
+     font-weight: 600;
 }
 
 section {

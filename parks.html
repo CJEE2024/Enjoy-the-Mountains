@@ -22,22 +22,27 @@
     </header>
 
     <main class="container">
-      <!-- <input type="radio" name="radio" id="locationRadio">
+      <input type="radio" name="radio" id="locationRadio" checked />
       <label for="locationRadio">By Location</label>
-      <input type="radio" name="radio" id="typeRadio">
+
+      <input type="radio" name="radio" id="typeRadio" />
       <label for="typeRadio">By Type</label>
-      <input type="radio" name="radio" id="allRadio">
-      <label for="allRadio">All</label> -->
+
       <h3>National Parks</h3>
       <form>
-        <label for="statesList">By Location</label>
-        <select id="statesList">
-          <option value="">Select...</option>
-        </select>
-        <label for="parkTypesList">By Type</label>
-        <select id="parkTypesList">
-          <option value="">Select...</option>
-        </select>
+        <div id="locationContainer">
+          <label for="statesList">By Location</label>
+          <select id="statesList">
+            <option value="">Select...</option>
+          </select>
+        </div>
+
+        <div id="parkTypeContainer">
+          <label for="parkTypesList">By Type</label>
+          <select id="parkTypesList">
+            <option value="">Select...</option>
+          </select>
+        </div>
       </form>
       <table id="nationalParkTable">
         <thead>
